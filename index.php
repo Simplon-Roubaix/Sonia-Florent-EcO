@@ -1,3 +1,7 @@
+<?php include ("info.php"); ?>
+
+
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -20,6 +24,59 @@
         <![endif]-->
 
 <!-- ~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~ -->
+<h1> <?php echo $infosite ['titre']; ?> </h1>
+<h2> <?php echo $infosite ['soustitre']; ?></h2>
+<!-- ~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~ -->
+
+
+
+<!-- ~~~~~~~~~~~~~~~ ARTICLES ~~~~~~~~~~~~~~~ -->
+<div class="container">
+
+  <article class="article">
+    <h4>blabla + prix</h4>
+    <figure><img src="img/botte1.jpg" alt=""></figure>
+    <a href="#">Voir l'article</a>
+  </article>
+
+  <article class="article">
+    <h4>blabla + prix</h4>
+    <figure><img src="img/botte1.jpg" alt=""></figure>
+    <a href="#">Voir l'article</a>
+  </article>
+
+  <article class="article">
+    <h4>blabla + prix</h4>
+    <figure class="figureimg"><img src="img/botte1.jpg" alt=""></figure>
+    <a href="#">Voir l'article</a>
+  </article>
+
+  <article class="article">
+    <h4>blabla + prix</h4>
+    <figure><img src="img/botte1.jpg" alt=""></figure>
+    <a href="#">Voir l'article</a>
+  </article>
+
+  <article class="article">
+    <h4>blabla + prix</h4>
+    <figure><img src="img/botte1.jpg" alt=""></figure>
+    <a href="#">Voir l'article</a>
+  </article>
+
+  <article class="article">
+    <h4>blabla + prix</h4>
+    <figure><img src="img/botte1.jpg" alt=""></figure>
+    <a href="#">Voir l'article</a>
+  </article>
+
+</div>
+<!-- ~~~~~~~~~~~~~~~ ARTICLES ~~~~~~~~~~~~~~~ -->
+
+
+<!-- ~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~ -->
+<!-- ~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~ -->
+
+
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
@@ -35,6 +92,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
-        <script src="js/bootstrap.js"></script>  
+        <script src="js/bootstrap.js"></script>
     </body>
 </html>
