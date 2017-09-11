@@ -1,5 +1,6 @@
 <?php include("info.php"); ?>
 
+<?php include("header.php"); ?>
 
 
 
@@ -28,3 +29,6 @@ foreach ($articles as $element2) {
 }
 
 ?>
+
+
+<?php include("footer.php"); ?>
