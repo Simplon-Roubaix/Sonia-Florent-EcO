@@ -19,7 +19,12 @@ foreach ($articles as $element2) {
       <?php echo $element2['description']; ?>
     </p>
     <p><?php echo $element2['prix'] ;?></p>
-    <a href="#" class="btn btn-primary">Voir l'article</a>
+    <a href="ficheproduit.php?
+             titre=<?php echo $element2['titre']; ?>&amp;
+             prix=<?php echo $element2['prix']; ?>&amp;
+             image=<?php echo $element2['image']; ?>&amp;
+             description=<?php echo $element2['description']; ?>
+                " class="btn btn-primary">Voir l'article</a>
   </div>
 </div>
 
