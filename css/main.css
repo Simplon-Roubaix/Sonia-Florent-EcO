@@ -104,7 +104,30 @@ textarea {
 = =                                                                       = =
    ========================================================================== */
 
+.container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
+.article{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: lightgrey;
+  margin: 10px;
+}
+
+.figure{
+  width: 80%;
+}
+
+figure img{
+  width: 100%;
+  height: auto;
+}
 
 
 
