@@ -1,4 +1,9 @@
 
+<!--FOOTER -->
+
+<p><?php echo $infosite['auteur']; ?></p>
+<p><?php echo $infosite['annee']; ?></p>
+<p><?php echo $infosite['pays']; ?></p>
 
 
 
