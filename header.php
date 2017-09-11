@@ -17,7 +17,6 @@
       <body>
 
         <header>
-          <?php include("info.php"); ?>
           <h1><?php echo $infosite['titre']; ?></h1>
           <h2><?php echo $infosite['soustitre']; ?></h2>
 
