@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Ça me botte!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.css">
@@ -24,7 +24,7 @@
           <h1><?php echo $infosite['titre']; ?></h1>
           <h2><?php echo $infosite['soustitre']; ?></h2>
 
-        
+
 
 
         </header>
