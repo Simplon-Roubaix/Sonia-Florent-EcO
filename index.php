@@ -1,9 +1,7 @@
 <?php include("info.php"); ?>
-
 <?php include("header.php"); ?>
 
 <div class="container">
-
 
  <?php
 
