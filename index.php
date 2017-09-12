@@ -5,7 +5,7 @@
 
  <?php
 
-foreach ($articles as $element2) {
+foreach ($articles as $key => $element2) {
 
 
 ?>
@@ -20,12 +20,7 @@ foreach ($articles as $element2) {
 
   <div class="hoverclass">
     <a class="buylink"
-       href="ficheproduit.php?
-             titre=<?php echo $element2['titre']; ?>&amp;
-             prix=<?php echo $element2['prix']; ?>&amp;
-             image=<?php echo $element2['image']; ?>&amp;
-             description=<?php echo $element2['description']; ?>
-                " class="btn btn-primary">Voir l'article</a>
+       href="ficheproduit.php?donnees=<?php echo $key;?>" class="btn btn-primary">Voir l'article</a>
   </div>
 
 </div>

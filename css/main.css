@@ -297,6 +297,8 @@ footer li{
 
 
    /* =================== FICHE PRODUIT ====================== */
+
+
  .titreficheproduit, .descriptionficheproduit, .prixficheproduit{
    font-family: 'Open Sans Condensed', sans-serif;
  }
@@ -314,17 +316,6 @@ footer li{
     font-weight: bold;
   }
 
- .containerficheproduit{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: row;
- }
-
- .imageproduit{
-   width: 40%;
-   height: auto;
- }
 
  .infosficheproduit{
    display: flex;
@@ -334,7 +325,25 @@ footer li{
    margin: 40px;
  }
 
+  .containerficheproduit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
+  .imageproduit{
+    width: 50%;
+    height: auto;
+  }
+
+ @media (min-width: 668px) {
+
+ .containerficheproduit{
+   flex-direction: row;
+ }
+
+}
    /* =================== FICHE PRODUIT ====================== */
 
 
