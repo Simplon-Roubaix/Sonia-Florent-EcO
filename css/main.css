@@ -131,7 +131,6 @@ textarea {
 
 
 
-
    /* =================== BODY ====================== */
 
    /* ======= CONTAINER CARDS ======== */
@@ -174,6 +173,23 @@ textarea {
      font-size: 1.5em;
    }
 
+   .buylink{
+     font-family: 'Open Sans Condensed', sans-serif;
+     font-size: 1em;
+     font-weight: bold;
+     text-align: center;
+     width: 100%;
+     background-color: white;
+     padding: 30px;
+     color:rgba(26,26,26, 0.7);
+     text-decoration: none;
+   }
+
+
+   /* ======= HOVER FOR CARDS 768px ======== */
+
+   @media (min-width: 768px) {
+
    .hoverclass{
      width: 100%;
      height: 100%;
@@ -183,12 +199,6 @@ textarea {
    }
 
    .buylink{
-     font-family: 'Open Sans Condensed', sans-serif;
-     font-size: 1em;
-     font-weight: bold;
-     text-align: center;
-     width: 100%;
-     background-color: white;
      padding: 30px;
      color:rgba(26,26,26, 0.7);
      position: absolute;
@@ -206,6 +216,7 @@ textarea {
      transition: 0.3s;
      bottom: 100px;
    }
+ }
    /* ======= END CARDS ======== */
 
 
@@ -214,6 +225,47 @@ textarea {
    /* =================== END BODY ====================== */
 
 
+
+   /* =================== FICHE PRODUIT ====================== */
+ .titreficheproduit, .descriptionficheproduit, .prixficheproduit{
+   font-family: 'Open Sans Condensed', sans-serif;
+ }
+
+  .titreficheproduit{
+    font-size: 4em;
+  }
+
+  .descriptionficheproduit{
+    font-size: 2em;
+  }
+
+  .prixficheproduit{
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+ .containerficheproduit{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+ }
+
+ .imageproduit{
+   width: 40%;
+   height: auto;
+ }
+
+ .infosficheproduit{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: flex-start;
+   margin: 40px;
+ }
+
+
+   /* =================== FICHE PRODUIT ====================== */
 
 
    /* ==========================================================================
