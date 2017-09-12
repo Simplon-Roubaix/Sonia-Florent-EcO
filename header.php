@@ -12,12 +12,12 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
       <body>
 
         <header>
-          <?php include("info.php"); ?>
           <h1><?php echo $infosite['titre']; ?></h1>
           <h2><?php echo $infosite['soustitre']; ?></h2>
 
