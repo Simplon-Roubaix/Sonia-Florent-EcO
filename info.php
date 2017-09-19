@@ -62,19 +62,3 @@ $infosite = array(
   'annee' =>  '2017',
   'pays' => 'France');
  ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

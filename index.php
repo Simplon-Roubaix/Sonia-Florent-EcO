@@ -1,9 +1,10 @@
 <?php include("header.php"); ?>
 
+<div class="admin">
+  <a href="espaceutilisateur.php"><i class="fa fa-lock" aria-hidden="true"></i>Espace Utilisateur</a>
+</div>
+
 <div class="container">
-
-
-
 
   <?php
   try

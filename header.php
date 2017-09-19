@@ -1,3 +1,16 @@
+<?php
+try{
+$bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+}
+catch (Exception $e)
+{
+  die('Erreur: '. $e->getMessage());
+}
+
+$info = $bdd -> query('SELECT titre, soustitre FROM infosite');
+$donnees = $info -> fetch();
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -22,10 +35,6 @@
       <body>
 
         <header>
-          <h1><?php echo $infosite['titre']; ?></h1>
-          <h2><?php echo $infosite['soustitre']; ?></h2>
-
-
-
-
+          <h1><?php echo $donnees['titre']; ?></h1>
+          <h2><?php echo $donnees['soustitre']; ?></h2>
         </header>

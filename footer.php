@@ -1,3 +1,15 @@
+<?php
+try{
+$bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+}
+catch (Exception $e)
+{
+  die('Erreur: '. $e->getMessage());
+}
+
+$infos = $bdd -> query('SELECT auteur, annee, pays FROM infosite');
+$donnees2 = $infos -> fetch();
+?>
 
 <!--FOOTER -->
 
@@ -27,8 +39,8 @@
           <div class="footer1 col-md-3 col-sm-6 paddingtop-bottom">
               <h6 class="heading7">CONTACT</h6>
                 <ul class="footer-ul">
-                  <li><a href="#"><?php echo $infosite['auteur']; ?></a></li>
-                  <li><a href="#"><?php echo $infosite['annee']; ?></a></li>
+                  <li><a href="#"><?php echo $donnees2['auteur']; ?></a></li>
+                  <li><a href="#"><?php echo $donnees2['annee']; ?></a></li>
                   <li><a href="#"> Terms  Conditions</a></li>
                   <li><a href="#"> Case Studies</a></li>
                   <li><a href="#"> Frequently Ask Questions</a></li>
@@ -37,7 +49,7 @@
               <div class="footer1 col-md-3 col-sm-6 paddingtop-bottom">
                   <h6 class="heading7">INFORMATIONS</h6>
                     <ul class="footer-ul">
-                      <li><a href="#"><?php echo $infosite['pays']; ?></a></li>
+                      <li><a href="#"><?php echo $donnees2['pays']; ?></a></li>
                       <li><a href="#"> Privacy Policy</a></li>
                     </ul>
                   </div>
