@@ -337,6 +337,12 @@ footer li{
     height: auto;
   }
 
+  .error{
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+
  @media (min-width: 668px) {
 
  .containerficheproduit{
