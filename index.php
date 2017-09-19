@@ -1,7 +1,14 @@
-<?php include("info.php"); ?>
 <?php include("header.php"); ?>
-<?php include("formulaire.php"); ?>
+<?php
+try{
+$bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+}
+catch (Exception $e)
+{
+  die('Erreur: '. $e->getMessage());
+}
 
+?>
 <div class="admin">
   <a href="espaceutilisateur.php"><i class="fa fa-lock" aria-hidden="true"></i>Espace Utilisateur</a>
 </div>
