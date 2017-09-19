@@ -1,42 +1,48 @@
-<?php include("info.php"); ?>
 <?php include("header.php"); ?>
 
 <div class="container">
 
- <?php
-
-foreach ($articles as $element2) {
 
 
-?>
 
-<div class="card">
+  <?php
+  try
+  {
+  	$bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'Paperback1966');
+  }
+  catch(Exception $e)
+  {
+          die('Erreur : '.$e->getMessage());
+  }
 
-  <img class="card-img-top cardimg" src="<?php echo $element2['image'] ;?>" alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title"><?php echo $element2['titre'];?> - <?php echo $element2['description']; ?></h4>
-    <p class="prix"><?php echo $element2['prix'] ;?></p>
-  </div>
+  $reponse = $bdd->query('SELECT * FROM articles ORDER BY prix');
 
-  <div class="hoverclass">
-    <a class="buylink"
-       href="ficheproduit.php?
-             titre=<?php echo $element2['titre']; ?>&amp;
-             prix=<?php echo $element2['prix']; ?>&amp;
-             image=<?php echo $element2['image']; ?>&amp;
-             description=<?php echo $element2['description']; ?>
-                " class="btn btn-primary">Voir l'article</a>
-  </div>
+  $reponse->execute();
 
-</div>
+  while ($donnees = $reponse->fetch())
+  {
+    ?>
+    <div class="card">
 
+      <img class="card-img-top cardimg" src="<?php echo $donnees['image'] ;?>" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title"><?php echo $donnees['titre'];?> - <?php echo $donnees['description']; ?></h4>
+        <p class="prix"><?php echo $donnees['prix'] ;?></p>
+      </div>
 
-<?php
+      <div class="hoverclass">
+        <a class="buylink"
+           href="ficheproduit.php?data=<?php echo $donnees['id'];?>" class="btn btn-primary">Voir l'article</a>
+      </div>
 
-}
+    </div>
 
-?>
+  <?php
+  }
 
-</div>
+  $reponse->closeCursor();
+
+   ?>
+
 
 <?php include("footer.php"); ?>
