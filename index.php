@@ -1,10 +1,11 @@
 <?php include("info.php"); ?>
 <?php include("header.php"); ?>
+<?php include("formulaire.php"); ?>
 
 <div class="container">
 
  <?php
-
+// changer la boucle
 foreach ($articles as $element2) {
 
 

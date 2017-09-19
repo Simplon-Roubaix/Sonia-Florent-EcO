@@ -24,8 +24,8 @@
         <header>
           <h1><?php echo $infosite['titre']; ?></h1>
           <h2><?php echo $infosite['soustitre']; ?></h2>
-
-
-
-
         </header>
+
+        <div class="admin">
+          <a href="espaceutilisateur.php"><i class="fa fa-lock" aria-hidden="true"></i>Espace Utilisateur</a>
+        </div>
