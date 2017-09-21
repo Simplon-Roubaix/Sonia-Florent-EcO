@@ -3,7 +3,7 @@
 <!-- CONNEXION A LA BASE DE DONNEES VIA PDO -->
 <?php
 try{
-$bdd = new PDO('mysql:host=localhost;dbname=e_commerce;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'Paperback1966', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 }
 catch (Exception $e)
 {
