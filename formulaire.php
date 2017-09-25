@@ -10,54 +10,92 @@ catch (Exception $e)
 
 include("info.php");
 include("header.php");
-//
-// $pseudo = strip_tags($_POST['pseudo']);
-// $mdp = strip_tags($_POST['mdp']);
-//
-// $entree = $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = :pseudo AND mdp = :mdp');
-// $entree ->execute(array(
-//   'pseudo' => $pseudo,
-//   'motdepasse' => $mdp
-// ));
-//
-// $donnees = $entree->fetch();
-//
-// if (isset($mdp) AND isset($pseudo))
-// {
-//   if ($donnees['pseudo'] == $pseudo AND $donnees['motdepasse'] == $mdp){
-//
+
 ?>
 
-<!-- <form action="index.php" method="post" enctype="multipart/form-data">
-  <p>Titre de l'article:</p>
-  <input type="text" name="titre" value="" required>
-  <p>Prix de l'article: </p>
-  <input type="text" name="prix" value="" required>
-  <p>Description :</p>
-  <input type="text" name="description" value="" required>
-  <input type="file" name="image" value="" required>
-  <input type="submit" name="envoyer" value="Envoyer">
-</form> -->
+
+
+
+<!-- FORMULAIRE -->
+
+
+
 
 <?php
-// } 
-//   } else {
-//     // Faire un retour sur la page connexion
-//     // $entree-> closeCursor();
-//     //  header('Location: espaceutilisateur.php');
-// }
-//
+} else {
+  echo "faux mot de passe";
+}
 
-//
+
+
+
+
+
 // $ajoutarticle = $bdd ->prepare('INSERT INTO articles (titre, prix, image, description) VALUES (:titre, :prix, :image, :description)' );
 // $ajoutarticle -> execute(array(
 //   'titre' => $_POST['titre'],
 //   'prix' => $_POST['prix'],
-//   'image' => $_POST['image'],
 //   'description' => $_POST['description']
 // ));
-
-
-// index.php
-
-include("footer.php"); ?>
+//
+//
+// // ENVOIE D'UN FICHIER
+//
+//
+// $fichier = $_FILES['monfichier'];
+//
+//
+// if (isset($fichier) AND $fichier['error'] == 0) {
+//   if($fichier['size'] <=10000000){
+//     $infofichier = pathinfo($fichier['name']);
+//     $extension = $infofichier['extension'];
+//     $extensionautorisees = array('jpg', 'jpeg');
+//     if(in_array($extension, $extensionautorisees)){
+//
+// $envoieimage = $bdd -> prepare('INSERT INTO images (photo) VALUES (:photo)');
+// $envoieimage -> execute(array('photo' = $fichier));
+//
+//
+//
+//
+//
+// //Pour obtenir le dernier id autoincrementer d'un tableau
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//     }
+//   }
+// }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// // index.php
+//
+// include("footer.php"); ?>

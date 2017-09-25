@@ -4,6 +4,7 @@
 <?php
 try{
 $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'Paperback1966', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
 }
 catch (Exception $e)
 {
@@ -24,10 +25,6 @@ if(isset($_POST['nomutilisateur'], $_POST['motdepasse'])){
 $nomutilisateur_formulaire = strip_tags($_POST['nomutilisateur']);
 $motdepasse_formulaire = strip_tags($_POST['motdepasse']);
 
-
-// $req3 = $bdd->query('SELECT pseudo, mdp FROM utilisateurs');
-
-
 $entree = $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = :pseudo AND mdp = :mdp');
 $entree ->execute(array(
   'pseudo' => $nomutilisateur_formulaire,
@@ -43,5 +40,6 @@ $donnees = $entree->fetch();
 
 
 ?>
+
 
 <?php include("footer.php"); ?>
