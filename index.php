@@ -28,7 +28,7 @@
     ?>
     <div class="card">
 
-      <img class="card-img-top cardimg" src="<?php echo $donnees['la_photo'] ;?>" alt="Card image cap">
+      <img class="card-img-top cardimg" src="<?php echo 'img/' . $donnees['la_photo'] ;?>" alt="Card image cap">
       <div class="card-block">
         <h4 class="card-title"><?php echo $donnees['titre'];?> - <?php echo $donnees['description']; ?></h4>
         <p class="prix"><?php echo $donnees['prix'] ;?></p>

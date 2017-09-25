@@ -22,7 +22,7 @@ $donnees = $req ->fetch();
  ?>
 
  <div class="containerficheproduit">
- <img class="imageproduit" src="<?php echo $donnees['la_photo'] ;?>" alt="article en vente">
+ <img class="imageproduit" src="<?php echo 'img/' . $donnees['la_photo'] ;?>" alt="article en vente">
 
  <div class="infosficheproduit">
  <h3 class="titreficheproduit"><?php echo $donnees['titre'] ;?></h3>
