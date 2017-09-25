@@ -16,15 +16,24 @@
           die('Erreur : '.$e->getMessage());
   }
 
+<<<<<<< HEAD
   $reponse = $bdd->query('SELECT * FROM articles ORDER BY prix');
 
+=======
+  $reponse = $bdd->query('SELECT * , images.photo AS la_photo
+                          FROM images
+                          INNER JOIN articles
+                          ON articles.id_image = images.id
+                          ORDER BY prix
+                          ');
+>>>>>>> eea61e76c551995d7b03f6fb59577f7e2785548d
 
   while ($donnees = $reponse->fetch())
   {
     ?>
     <div class="card">
 
-      <img class="card-img-top cardimg" src="<?php echo $donnees['image'] ;?>" alt="Card image cap">
+      <img class="card-img-top cardimg" src="<?php echo 'img/' . $donnees['la_photo'] ;?>" alt="Card image cap">
       <div class="card-block">
         <h4 class="card-title"><?php echo $donnees['titre'];?> - <?php echo $donnees['description']; ?></h4>
         <p class="prix"><?php echo $donnees['prix'] ;?></p>
