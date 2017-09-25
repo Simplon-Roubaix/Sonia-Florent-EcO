@@ -73,7 +73,7 @@ catch(Exception $e)
 
         $donnees = $reponse->fetch();
         $last_id = $donnees[0];
-
+        header('Location: index.php');
       }
     }
 

@@ -37,13 +37,11 @@ $entree ->execute(array(
 $donnees = $entree->fetch();
 
   if( $donnees['pseudo'] == $nomutilisateur_formulaire AND $donnees['mdp'] == $motdepasse_formulaire){
-    echo 'bravo';
-  }else{
-    echo 'raté';
+    header('Location: ajoutproduit.php');
   }
 }
 
-$entree->closeCursor();
+
 ?>
 
 <?php include("footer.php"); ?>
