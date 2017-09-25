@@ -9,7 +9,7 @@
   <?php
   try
   {
-  	$bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'Paperback1966');
+  	$bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   }
   catch(Exception $e)
   {
@@ -18,7 +18,6 @@
 
   $reponse = $bdd->query('SELECT * FROM articles ORDER BY prix');
 
-  $reponse->execute();
 
   while ($donnees = $reponse->fetch())
   {
